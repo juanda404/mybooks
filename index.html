@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8"> <!-- //Browser load this to understand the character set -->
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>My Books</title>
+   <meta name="description"
+      content="A personal library webpage showcasing favorite books, currently reading, and books to read.">
+   <meta name="keywords" content="books, personal library, favorites, reading list,">
+   <meta name="author" content="Juan David Santa Maria G">
+   <meta name="robots" content="index, follow">
+   <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+   <link rel="manifest" href="assets/icons/site.webmanifest">
+   <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon">
+   <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+   <!-- HEADER -->
+   <header role="banner">
+      <h1>My Books</h1>
+      <p>My personal library: read, favorites, and upcoming.</p>
+      <nav aria-label="Main navigation">
+         <ul role="list">
+            <li role="listitem"><a href="#favorites">Favorites</a></li>
+            <li role="listitem"><a href="#read-books">Read Books</a></li>
+            <li role="listitem"><a href="#BookToRead">Books to Read</a></li>
+         </ul>
+      </nav>
+   </header>
+
+   <!-- MAIN -->
+   <main role="main" aria-label="Book library content">
+      
+      <aside role="complementary" aria-labelledby="genres-heading">
+         <h3 id="genres-heading">Genres</h3>
+         <ul role="list">
+            <li role="listitem">Fantasy</li>
+            <li role="listitem">Self-Help</li>
+            <li role="listitem">Children's Literature</li>
+            <li role="listitem">Romance</li>
+         </ul>
+      </aside>
+
+      <!-- FAVORITES -->
+      <section id="favorites" aria-labelledby="favorites-heading">
+         <h2 id="favorites-heading">
+            <span aria-hidden="true">⭐</span>
+            <span>Favorites</span>
+         </h2>
+         <div role="list" aria-label="Favorite books">
+            <article role="listitem">
+               <figure>
+                  <img src="assets/ELSEÑORANILLOS.png" alt="Book cover of The Lord of the Rings">
+                  <figcaption>Cover</figcaption>
+               </figure>
+               <h3>The Lord of the Rings</h3>
+               <p>Read: <strong><time datetime="2025">2025</time></strong></p>
+               <p>My favorite fantasy saga. Epic and profound.</p>
+            </article>
+            <article role="listitem">
+               <figure>
+                  <img src="assets/Atomic Habits.jpg" alt="Book cover of Atomic Habits">
+                  <figcaption>Cover</figcaption>
+               </figure>
+               <h3>Atomic Habits</h3>
+               <p>Read: <strong><time datetime="2024">2024</time></strong></p>
+               <p>Practical and applicable to improving every area of your life.</p>
+            </article>
+         </div>
+      </section>
+
+      <!-- READING NOW -->
+      <section id="reading-now" aria-labelledby="reading-now-heading">
+         <h2 id="reading-now-heading">
+            <span aria-hidden="true">📖</span>
+            <span>Reading Now</span>
+         </h2>
+         <div role="list" aria-label="Currently reading">
+            <article role="listitem">
+               <figure>
+                  <img src="assets/ELSEÑORANILLOS.png" alt="Book cover of The Lord of the Rings">
+                  <figcaption>Cover</figcaption>
+               </figure>
+               <h3>The Lord of the Rings</h3>
+               <p>Started: <strong><time datetime="2025">2025</time></strong></p>
+               <p>My favorite fantasy saga. Epic and profound.</p>
+            </article>
+         </div>
+      </section>
+
+      <!-- READ BOOKS -->
+      <section id="read-books" aria-labelledby="read-books-heading">
+         <h2 id="read-books-heading">
+            <span aria-hidden="true">📚</span>
+            <span>Books I've Read</span>
+         </h2>
+         <div role="list" aria-label="Completed books">
+            <article role="listitem">
+               <figure>
+                  <img src="assets/Thelittleprince.jpeg" alt="Book cover of The Little Prince">
+                  <figcaption>Cover</figcaption>
+               </figure>
+               <h3>The Little Prince</h3>
+               <p>Read: <strong><time datetime="2024">2024</time></strong></p>
+               <p>It's a work in French language, the most famous by Antoine de Saint-Exupéry.</p>
+            </article>
+            <article role="listitem">
+               <figure>
+                  <img src="assets/YoungHealth.jpeg" alt="Book cover of Young People, Social Media and Health">
+                  <figcaption>Cover</figcaption>
+               </figure>
+               <h3>Young People, Social Media and Health</h3>
+               <p>Read: <strong><time datetime="2024">2024</time></strong></p>
+               <p>Draws on novel research to understand, explain, and illustrate young people's experiences of engagement
+                  with health-related social media.</p>
+            </article>
+            <article role="listitem">
+               <figure>
+                  <img src="assets/TheCatintheHat.jpeg" alt="Book cover of The Cat in the Hat">
+                  <figcaption>Cover</figcaption>
+               </figure>
+               <h3>The Cat in the Hat</h3>
+               <p>Read: <strong><time datetime="2023">2023</time></strong></p>
+               <p>I know some new tricks, said the Cat in the Hat. "A lot of good tricks. I will show them to...</p>
+            </article>
+            <article role="listitem">
+               <figure>
+                  <img src="assets/TheNotebook.jpeg" alt="Book cover of The Notebook">
+                  <figcaption>Cover</figcaption>
+               </figure>
+               <h3>The Notebook</h3>
+               <p>Read: <strong><time datetime="2021">2021</time></strong></p>
+               <p>The unforgettable, heartbreaking love story from a New York Times bestselling author about a young
+                  socialite and the boy who once stole her...</p>
+            </article>
+         </div>
+      </section>
+
+      <!-- BOOKS TO READ -->
+      <section id="BookToRead" aria-labelledby="books-to-read-heading">
+         <h2 id="books-to-read-heading">
+            <span aria-hidden="true">📘</span>
+            <span>Books To Read</span>
+         </h2>
+         <div>
+            <h3 class="visually-hidden">Unordered reading list</h3>
+            <ul role="list" aria-label="Books to read without specific order">
+               <li role="listitem">Throne of Glass - <strong>Sarah J. Maas</strong></li>
+               <li role="listitem">Como Ganar Amigos e Influir sobre las personas - <strong>Dale Carnegie</strong></li>
+               <li role="listitem">The Elements of Style - <strong>William Strunk</strong></li>
+               <li role="listitem">Courage is Calling - <strong>Ryan Holiday</strong></li>
+            </ul>
+            <h3 class="visually-hidden">Priority reading list</h3>
+            <ol type="1" role="list" aria-label="Books to read in priority order">
+               <li role="listitem">Meditations - <strong>Marcus Aurelius</strong></li>
+               <li role="listitem">Harry Potter and the Chamber of Secrets - <strong>#2 in series</strong></li>
+               <li role="listitem">Why Code? - <strong>Krishnav Bajoria</strong></li>
+            </ol>
+         </div>
+      </section>
+
+      <!-- RECOMMENDATIONS FORM -->
+      <section id="recommendations" aria-labelledby="recommendations-heading">
+         <h2 id="recommendations-heading">Book Recommendations</h2>
+         <form action="#" method="post" aria-label="Book recommendation form">
+            <fieldset>
+               <legend>Contact</legend>
+               <label for="name">Your Name</label>
+               <input 
+                  type="text" 
+                  id="name" 
+                  name="name" 
+                  placeholder="Enter your name" 
+                  required
+                  aria-required="true"
+                  aria-describedby="name-hint">
+               <span id="name-hint" class="visually-hidden">Please enter your full name</span>
+
+               <label for="email">Your Email</label>
+               <input 
+                  type="email" 
+                  id="email" 
+                  name="email" 
+                  placeholder="user@example.com" 
+                  required
+                  aria-required="true"
+                  aria-describedby="email-hint">
+               <span id="email-hint" class="visually-hidden">Please enter a valid email address</span>
+            </fieldset>
+
+            <fieldset>
+               <legend>Book Recommendation</legend>
+               <label for="book-title">Recommended Book</label>
+               <input 
+                  type="text" 
+                  id="book-title" 
+                  name="book-title" 
+                  placeholder="Book title" 
+                  required
+                  aria-required="true">
+
+               <label for="book-author">Author</label>
+               <input 
+                  type="text" 
+                  id="book-author" 
+                  name="book-author" 
+                  placeholder="Author name" 
+                  required
+                  aria-required="true">
+
+               <div>
+                  <label for="reason">Why do you recommend it?</label>
+                  <textarea 
+                     id="reason" 
+                     name="reason" 
+                     rows="4" 
+                     placeholder="Write your reason..." 
+                     required
+                     aria-required="true"
+                     aria-describedby="reason-hint"></textarea>
+                  <span id="reason-hint" class="visually-hidden">Explain why you recommend this book</span>
+               </div>
+            </fieldset>
+
+            <button type="submit" aria-label="Submit book recommendation">Send Recommendation</button>
+         </form>
+      </section>
+
+   </main>
+
+   <!-- FOOTER -->
+   <footer role="contentinfo">
+      <div>
+         <div>
+            <p>© 2025 - My Personal Library</p>
+         </div>
+         <div>
+            <a href="mailto:juandavidsantamariag@gmail.com?subject=Contacto&body=Hello" 
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Send email to Juan David">Contact me</a> - 
+            <a href="tel:+573003617203" 
+               aria-label="Call Juan David at +57 300 3617203">Call me +57 300 3617203</a>
+         </div>
+      </div>
+   </footer>
+
+</body>
+
+</html>

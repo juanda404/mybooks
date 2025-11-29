@@ -1,0 +1,276 @@
+/* -----------------------------------
+   GOOGLE FONTS
+----------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@600;700&display=swap');
+
+/* -----------------------------------
+   CSS VARIABLES
+----------------------------------- */
+:root {
+  --bg-main: #faf7f2;
+  --bg-light: #FFFFFF;
+  --bg-soft: #F0EDE6;
+
+  --text-main: #2c2c2c;
+  --text-muted: #6A6A6A;
+  --text-primary: #1A4D8F;
+  --text-primary-dark: #133a69;
+
+  --radius: 12px;
+
+  --shadow-base: 0 4px 12px rgba(0,0,0,0.06);
+  --shadow-hover: 0 6px 16px rgba(0,0,0,0.10);
+}
+
+/* -----------------------------------
+   RESET & BASE
+----------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg-main);
+  color: var(--text-main);
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+  padding: 16px;
+  max-width: 1024px;
+  margin: auto;
+}
+
+img {
+  width: 150px;
+  height: 200px;
+  display: block;
+  border-radius: 8px;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  color: var(--text-primary);
+}
+
+h1 { font-size: 2.3rem; margin-bottom: 8px; }
+h2 { font-size: 1.8rem; margin-bottom: 12px; }
+h3 { font-size: 1.3rem; margin: 12px 0 6px; text-transform: capitalize; }
+
+/* -----------------------------------
+   HEADER
+----------------------------------- */
+header {
+  background: var(--bg-soft);
+  padding: 24px 16px;
+  border-radius: var(--radius);
+  text-align: center;
+  margin-bottom: 32px;
+  position: sticky;
+  top: 18px;
+}
+
+header p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+nav ul {
+  list-style: none;
+  margin-top: 14px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: var(--text-primary-dark);
+}
+
+/* -----------------------------------
+   SIDEBAR (GENRES)
+----------------------------------- */
+aside {
+  background: var(--bg-light);
+  padding: 16px;
+  border-radius: var(--radius);
+  margin-bottom: 32px;
+  box-shadow: var(--shadow-base);
+  height: 15vh;
+  z-index: 1;
+}
+
+aside ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+aside h3 {
+  margin-bottom: 8px;
+}
+
+/* -----------------------------------
+   SECTIONS & CARDS
+----------------------------------- */
+section {
+  margin-bottom: 48px;
+}
+
+section > div {
+  display: grid;
+  gap: 24px;
+}
+
+article {
+  background: var(--bg-light);
+  padding: 16px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-base);
+  height: 50vh;
+  overflow: auto;
+  text-align: justify;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+article:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+article p strong {
+  color: var(--text-primary);
+}
+
+/* -----------------------------------
+   LISTS
+----------------------------------- */
+section ul,
+section ol {
+  padding-left: 16px;
+  line-height: 1.8;
+}
+
+li:first-child {
+  color:red;
+}
+
+/* -----------------------------------
+   FORM
+----------------------------------- */
+form {
+  background: var(--bg-light);
+  padding: 24px;
+  border-radius: var(--radius);
+  max-width: 600px;
+  margin: auto;
+  box-shadow: var(--shadow-base);
+}
+
+fieldset {
+  border: none;
+  margin-bottom: 16px;
+}
+
+label {
+  display: block;
+  margin: 6px 0 4px;
+  font-weight: 500;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #D0D0D0;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border: 1px solid var(--text-primary);
+  box-shadow: 0 0 0 2px #DCE9F7;
+}
+
+button {
+  width: 100%;
+  background: var(--text-primary);
+  color: #FFFFFF;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+button:hover {
+  background: var(--text-primary-dark);
+}
+
+/* -----------------------------------
+   FOOTER
+----------------------------------- */
+footer {
+  background: linear-gradient(to right, brown, var(--bg-soft));
+  padding: 24px 16px;
+  border-radius: var(--radius);
+  text-align: center;
+  margin-top: 48px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+footer a {
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* -----------------------------------
+   DESKTOP (≥ 768px)
+----------------------------------- */
+@media (min-width: 768px) {
+  body { padding: 32px 64px; }
+
+  main {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 32px;
+  }
+
+  aside { height: 30vh; }
+  aside ul { display: block; }
+
+  section > div {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+}
+
+/* -----------------------------------
+   MOBILE (≤ 480px)
+----------------------------------- */
+@media (max-width: 480px) {
+  aside { height: 20vh; }
+
+  aside h3 { margin-bottom: 0; }
+
+  aside ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}
